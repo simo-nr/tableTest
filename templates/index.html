@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <title>Test your multiplication tables!</title>
+</head>
+
+<script>
+    function func() {
+        var answer = document.getElementById("answer").value;
+        var int1 = document.getElementById("int1").innerHTML;
+        var int2 = document.getElementById("int2").innerHTML;
+        // console.log("answer");
+        // console.log(answer);
+        // console.log("int1");
+        // console.log(int1);
+        // console.log("int2");
+        // console.log(int2);
+        if(answer != int1 * int2) {
+            document.getElementById("reply").innerHTML = "Wrong, try again.";
+        }
+        else {
+            document.getElementById("reply").innerHTML = "Correct!";
+            int1 = Math.floor(Math.random() * 11);
+            int2 = Math.floor(Math.random() * 11);
+            document.getElementById("int1").innerHTML = int1;
+            document.getElementById("int2").innerHTML = int2;
+            document.getElementById("answer").value = "";
+        }
+    }
+
+    function pageLoad() {
+        console.log("page load");
+        document.getElementById("int1").innerHTML = Math.floor(Math.random() * 11);
+        document.getElementById("int2").innerHTML = Math.floor(Math.random() * 11);
+    }
+
+    document.onkeydown=function(evt){
+        var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
+        if(keyCode == 13) {
+            func();
+        }
+    }
+
+</script>
+
+<body onload="pageLoad()">
+    <div id="header"><h2>Test your multiplication tables!</h2></div>
+
+    <div id="parent">
+        <div id="int"> <p id="int1">5</p> </div>
+        <div id="symbol"> <p> x </p> </div>
+        <div id="int"> <p id="int2">7</p> </div>
+        <div id="symbol"> <p> = </p> </div>
+    </div>
+
+    <div id="header">
+        <input type="number" name="answer" id="answer">
+        <input type="submit" value="Enter" onclick="func()">
+        <!-- <button type="submit" onclick="func()">Enter</button> -->
+    </div>
+
+    <div id="header">
+        <p id="reply"></p>
+        <p id="streak"></p>
+    </div>
+
+</body>
+</html>

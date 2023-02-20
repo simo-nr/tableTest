@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: chartreuse; */
+}
+#parent {
+    display: flex;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    /* background-color: aquamarine; */
+}
+#int {
+    width: 25%;
+    /* background: lightblue; */
+    /* Just so it's visible */
+}
+#symbol {
+    width: 25%;
+    /* Grow to rest of container */
+    /* background: lightgreen; */
+    /* Just so it's visible */
+}
