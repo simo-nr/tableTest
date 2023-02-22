@@ -16,6 +16,14 @@ function func() {
         // select 2 new random numbers not equal to the previous
         number1 = Math.floor(Math.random() * 11);
         number2 = Math.floor(Math.random() * 11);
+        if(int1 == 0 || int2 == 0) {
+            while(number1 == int1 || number1 == 0) {
+                number1 = Math.floor(Math.random() * 11);
+            }
+            while(number2 == int2 || number2 == 0) {
+                number2 = Math.floor(Math.random() * 11)
+            }
+        }
         while(number1 == int1) {
             number1 = Math.floor(Math.random() * 11);
         }
@@ -40,4 +48,5 @@ document.onkeydown=function(evt){
     if(keyCode == 13) {
         func();
     }
+
 }
