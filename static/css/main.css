@@ -8,17 +8,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     /* background-color: chartreuse; */
 }
-#parent {
+.container {
     display: flex;
-    width: 20%;
+    /* width: 20%; */
     margin: auto;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     /* background-color: aquamarine; */
 }
-#int {
-    width: 25%;
+.box {
+    text-align: center;
+    margin: 10px;
+    /* width: 25%; */
     /* background: lightblue; */
     /* Just so it's visible */
 }

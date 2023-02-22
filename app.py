@@ -1,3 +1,4 @@
+# python3 -m venv C:\Users\simon\Documents\Projects\tableTest\env
 # source env/bin/activate
 from flask import Flask, render_template, url_for, request
 from random import randint
