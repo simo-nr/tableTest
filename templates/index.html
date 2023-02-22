@@ -8,10 +8,17 @@
     <title>Test your multiplication tables!</title>
 </head>
 
-
-
 <body onload="pageLoad()">
     <div id="header"><h2>Test your multiplication tables!</h2></div>
+
+    <div class="settings">
+        <p>Settings:</p>
+        <form>
+            <input type="checkbox" id="darkMode" value="Dark mode" >
+            <label for="darkMode">Dark mode</label>
+        </form>
+    </div>
+    
 
     <div class="container">
         <div class="box"> <p id="int1">5</p> </div>
@@ -32,5 +39,11 @@
     </div>
 
     <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+    <script>
+        function darkMode() {
+            const cb = document.getElementById("darkMode");
+            console.log(cb.checked);
+        }
+    </script>
 </body>
 </html>

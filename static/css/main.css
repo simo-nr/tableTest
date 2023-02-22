@@ -33,3 +33,8 @@ body {
     /* background: lightgreen; */
     /* Just so it's visible */
 }
+
+.settings {
+    font-size: 12px;
+    font-weight: 700;
+}

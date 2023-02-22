@@ -43,6 +43,24 @@ function pageLoad() {
     document.getElementById("int2").innerHTML = Math.floor(Math.random() * 11);
 }
 
+function darkMode() {
+    const cb = document.getElementById("darkMode");
+    console.log(cb.checked);
+}
+
+document.getElementById("darkMode").addEventListener("click", function() {
+    const darkMode = document.getElementById("darkMode").checked;
+    console.log(darkMode)
+    if(darkMode) {
+        document.body.style.backgroundColor = "#121e30";
+        document.body.style.color = "#f7f8fa";
+    }
+    else {
+        document.body.style.backgroundColor = "transparent";
+        document.body.style.color = "black";
+    }
+});
+
 document.onkeydown=function(evt){
     var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
     if(keyCode == 13) {
