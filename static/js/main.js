@@ -107,6 +107,30 @@ function darkMode() {
     }
 }
 
+function showPopup(popupWindow) {
+    if(popupWindow == 'hard') {
+        var popup = document.getElementById("popupHard");
+        popup.style.display = "block";
+    }
+    else {
+        var popup = document.getElementById("popupHard");
+        popup.style.display = "block";
+    }
+    
+  }
+  
+  function hidePopup(popupWindow) {
+    if(popupWindow == 'hard') {
+        var popup = document.getElementById("popupHard");
+        popup.style.display = "none";
+    }
+    else {
+        var popup = document.getElementById("popupHard");
+        popup.style.display = "none";
+    }
+    
+  }  
+
 document.getElementById("darkMode").addEventListener("click", darkMode);
 
 document.getElementById("hardMode").addEventListener("click", function() {

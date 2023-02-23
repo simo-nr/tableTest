@@ -42,3 +42,23 @@ body {
 .text {
     margin: 6px;
 }
+
+.popup {
+    color: black;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+  
+  .my-button {
+    height: 18px;
+    margin: 5px;
+  }
+  
+  .my-button:hover + .popup, .my-button:focus + .popup {
+    display: block;
+  }

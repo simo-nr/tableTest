@@ -14,12 +14,23 @@
     <div class="settings" id="settings">
         <p>Settings:</p>
         <form>
-            <input type="checkbox" id="darkMode" value="Dark mode" >
-            <label for="darkMode">Dark mode</label>
+            <div>
+                <input type="checkbox" id="darkMode" value="Dark mode" >
+                <label for="darkMode">Dark mode</label>
+            </div>
         </form>
         <form>
-            <input type="checkbox" id="hardMode" value="Hard mode" >
-            <label for="hardMode">Hard mode</label>
+            <div>
+                <input type="checkbox" id="hardMode" value="Hard mode" >
+                <label for="hardMode">Hard mode</label>
+                <button class="my-button" onmouseover="showPopup('hard')" onmouseout="hidePopup('hard')" ontouchstart="showPopup('hard')" ontouchend="hidePopup('hard')">
+                    i
+                </button>
+                <div class="popup" id="popupHard">
+                    Hard mode is designed to make the exercises a little more difficult. 
+                    The range of possible numbers is increased and some of the easier tables have been removed.
+                </div>
+            </div>
         </form>
     </div>
     
